@@ -1,4 +1,5 @@
 import numpy as np
+import platform
 from keras.datasets import mnist
 from keras.models import Sequential
 from keras.layers.core import Dense, Dropout, Activation
@@ -7,7 +8,6 @@ from keras.utils import np_utils
 from keras.callbacks import EarlyStopping
 from keras import regularizers
 
-import matplotlib.pyplot as plt
 
 """
 Deep Learning Custom Factors
@@ -24,7 +24,7 @@ Deep Learning Custom Factors
 - batch_size
 - dropout
 
-*** regularization : 
+*** regularization :
 - kernel_regularizer=regularizers.l1(0.01) / l2 / elastic_net
 
 *** initializer
@@ -92,32 +92,36 @@ print('')
 """
 *** plot accuracy and loss
 """
+if platform.system() == 'Windows':
+    import matplotlib.pyplot as plt
 
-# list all data in history
-print(history.history.keys())
-# summarize history for accuracy
-plt.plot(history.history['acc'])
-plt.plot(history.history['val_acc'])
-plt.title('model accuracy')
-plt.ylabel('accuracy')
-plt.xlabel('epoch')
-plt.legend(['train', 'test'], loc='upper left')
-plt.show()
-# summarize history for loss
-plt.plot(history.history['loss'])
-plt.plot(history.history['val_loss'])
-plt.title('model loss')
-plt.ylabel('loss')
-plt.xlabel('epoch')
-plt.legend(['train', 'test'], loc='upper left')
-plt.show()
+    # list all data in history
+    print(history.history.keys())
+    # summarize history for accuracy
+    plt.plot(history.history['acc'])
+    plt.plot(history.history['val_acc'])
+    plt.title('model accuracy')
+    plt.ylabel('accuracy')
+    plt.xlabel('epoch')
+    plt.legend(['train', 'test'], loc='upper left')
+    plt.show()
+    # summarize history for loss
+    plt.plot(history.history['loss'])
+    plt.plot(history.history['val_loss'])
+    plt.title('model loss')
+    plt.ylabel('loss')
+    plt.xlabel('epoch')
+    plt.legend(['train', 'test'], loc='upper left')
+    plt.show()
+else:
+    print('acc', history.history['acc'])
+    print('val_acc',history.history['val_acc'])
 
 
 """
 *** save and restore trained model
 """
-from keras.models import load_model
-from models import model_from_json
+from keras.models import load_model, model_from_json
 
 # 학습된 모델 저장
 model.save('mnist_model.h5')
@@ -130,5 +134,4 @@ model = load_model('mnist_model.h5')
 json_str = model.to_json()
 
 # json 파일에 저장된 구조로 모델 재구성
-model = model_from_json(json_string)
-
+model = model_from_json(json_str)
