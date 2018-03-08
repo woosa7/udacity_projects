@@ -10,3 +10,7 @@ https://github.com/udacity/ud120-projects.git
 
 5. Outliers
    -- outlier_removal_regression / outlier_cleaner : residual error가 큰 10 % 버림.
+   -- enron_outliers
+
+6. K-means
+   -- k_means_cluster
