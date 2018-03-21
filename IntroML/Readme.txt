@@ -14,7 +14,21 @@ https://github.com/udacity/ud120-projects.git
 
 09. Clustering -- k_means_cluster
 
-11. Text Learning : NLTK -- SKIP!
+11. Text Learning : NLTK
+
+    --------------------------------------------------------------------------
+    conda install nltk
+    import nltk
+    nltk.download()  --> 링크 클릭 --> GUI에서 all-copora 다운로드
+    sw = stopwords.words("english")  # 에러 없으면 설치 성공
+    --------------------------------------------------------------------------
+
+    # stemming --> bag of word --> TfIdf vectorization
+    # TfIdf : Tf - term frequency. Idf - inverse document frequency. (inverse = Upweight rare words)
+
+    tools/parse_out_email_text : nltk 사용해 stemming words 추출
+    vectorize_text : parse_out_email_text를 통해 추출한 두 사람의 이메일 단어를 TfIdf vecterization
+
 
 12. Feature Selection
     -- poi_flag_email : 각 사람이 poi와 주고 받은 이메일 갯수 count
