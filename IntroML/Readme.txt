@@ -14,6 +14,7 @@ https://github.com/udacity/ud120-projects.git
 
 09. Clustering -- k_means_cluster
 
+
 11. Text Learning : NLTK
 
     --------------------------------------------------------------------------
@@ -33,7 +34,9 @@ https://github.com/udacity/ud120-projects.git
 12. Feature Selection
     -- poi_flag_email : 각 사람이 poi와 주고 받은 이메일 갯수 count
     -- poi_flag_fraction : 각 사람이 poi와 주고 받은 이메일 비율
+    -- find_signature : overfitting 유발하는 outlier check
 
+    --------------------------------------------------------------------------
     # tools/email_preprocess.py 참조
     from sklearn.feature_selection import SelectPercentile, SelectKBest
 
@@ -42,11 +45,14 @@ https://github.com/udacity/ud120-projects.git
 
     high bias data, low r square, large SSE --> few features used
     high variance data --> many features, carefully optimized performance on training data
+    --------------------------------------------------------------------------
 
 
 13. PCA
 
+
 14. Validation
+
 
 15. Evaluation Metrics
 

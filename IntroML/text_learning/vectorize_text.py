@@ -30,7 +30,7 @@ for name, from_person in [("sara", from_sara), ("chris", from_chris)]:
     for path in from_person:
 
         temp_counter += 1
-        if temp_counter % 1000 == 0:
+        if temp_counter % 1000 == 0:  # total 17578
             print(temp_counter)
 
         # path = os.path.join('..', path[:-1])
@@ -41,7 +41,8 @@ for name, from_person in [("sara", from_sara), ("chris", from_chris)]:
         parsed_text = parseOutText(email)
 
         ### use str.replace() to remove any instances of the words
-        drop_word = ["sara", "shackleton", "chris", "germani"]
+        # drop_word = ["sara", "shackleton", "chris", "germani"]
+        drop_word = ["sara", "shackleton", "chris", "germani", "sshacklensf", "cgermannsf"] # remove outlier
         for word in drop_word:
             parsed_text = parsed_text.replace(word, "")
 
@@ -73,5 +74,5 @@ print(word_vec.shape)
 
 print(len(vectorizer.get_feature_names()))
 
-print(vectorizer.get_feature_names()[34596])
+# print(vectorizer.get_feature_names()[34596])
 
