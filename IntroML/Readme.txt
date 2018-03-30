@@ -49,6 +49,8 @@ https://github.com/udacity/ud120-projects.git
 
 
 13. PCA
+    -- eigenfaces (http://scikit-learn.org/stable/auto_examples/applications/plot_face_recognition.html)
+    PCA --> SVM --> classify faces
 
 
 14. Validation
