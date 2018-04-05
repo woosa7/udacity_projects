@@ -53,12 +53,9 @@ https://github.com/udacity/ud120-projects.git
     PCA --> SVM --> classify faces
 
 
-14. Validation
+14. Validation : GridSearchCV
 
-
-15. Evaluation Metrics
-
-
-
-
-
+    sklearn.model_selection.GridSearchCV
+    parameters = {'kernel':('linear', 'rbf'), 'C':[1, 10]}
+    svr = svm.SVC()
+    clf = GridSearchCV(svr, parameters) --> (linear, 1) / (linear, 10) / (rbf, 1) / (rbf, 10)
