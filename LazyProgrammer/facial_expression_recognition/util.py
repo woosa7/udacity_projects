@@ -60,6 +60,7 @@ def y2indicator(y):
 # https://www.kaggle.com/c/challenges-in-representation-learning-facial-expression-recognition-challenge/data
 def getData(balance_ones=True):
     # images are 48x48 = 2304 size vectors
+    print('----------- data loading')
     Y = []
     X = []
     first = True
@@ -71,7 +72,13 @@ def getData(balance_ones=True):
             Y.append(int(row[0]))
             X.append([int(p) for p in row[1].split()])
 
-    X, Y = np.array(X) / 255.0, np.array(Y)
+    X, Y = np.array(X) / 255.0, np.array(Y)     # list to array
+
+    print(X.shape)
+    print(Y.shape)
+
+    # print(X[0])
+    # print(Y[0])
 
     if balance_ones:
         # balance the 1 class
@@ -80,6 +87,9 @@ def getData(balance_ones=True):
         X1 = np.repeat(X1, 9, axis=0)
         X = np.vstack([X0, X1])
         Y = np.concatenate((Y0, [1]*len(X1)))
+
+        print(X.shape)
+        print(Y.shape)
 
     return X, Y
 
