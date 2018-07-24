@@ -11,5 +11,5 @@ https://www.kaggle.com/c/challenges-in-representation-learning-facial-expression
 
 
 ### 2. ML and DL by Balazs
-
 http://www.globalsoftwaresupport.com/machine-learning-deep-learning-python/
+
