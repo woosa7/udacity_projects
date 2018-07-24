@@ -1,2 +1,5 @@
 # udacity_projects
-Udacity &amp; Udemy projects
+Udemy projects
+
+### 1. LazyProgrammer
+https://github.com/lazyprogrammer/machine_learning_examples
