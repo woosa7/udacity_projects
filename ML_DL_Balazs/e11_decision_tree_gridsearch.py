@@ -7,8 +7,8 @@ from sklearn import datasets
 
 dataset = datasets.load_iris()      # count = 150
 
-dataset.features = dataset.data
-dataset.targets = dataset.target
+features = dataset.data
+targets = dataset.target
 
 # with grid search you can find an optimal parameter "parameter tuning" !!!
 param_grid = {'max_depth': np.arange(1, 10)}
@@ -17,7 +17,7 @@ param_grid = {'max_depth': np.arange(1, 10)}
 # initializes the tree randomly: thats why you get different results !!!
 tree = GridSearchCV(DecisionTreeClassifier(), param_grid)
 
-feature_train, feature_test, target_train, target_test = train_test_split(dataset.features, dataset.targets, test_size=.3)
+feature_train, feature_test, target_train, target_test = train_test_split(features, targets, test_size=.3)
 
 tree.fit(feature_train, target_train)
 tree_predictions = tree.predict_proba(feature_test)[:, 1]

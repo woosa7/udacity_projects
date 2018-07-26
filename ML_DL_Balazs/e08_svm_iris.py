@@ -17,12 +17,10 @@ from sklearn import datasets
 
 dataset = datasets.load_iris()
 
-# print(dataset)
-
 features = dataset.data
-targetVariables = dataset.target
+targets = dataset.target
 
-featureTrain, featureTest, targetTrain, targetTest = train_test_split(features, targetVariables, test_size=0.3)
+featureTrain, featureTest, targetTrain, targetTest = train_test_split(features, targets, test_size=0.3)
 
 model = svm.SVC()
 # model = svm.SVC(gamma=0.001, C=100)
