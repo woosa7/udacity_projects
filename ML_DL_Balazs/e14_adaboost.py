@@ -1,4 +1,3 @@
-import pandas as pd
 from sklearn import datasets
 from sklearn.ensemble import AdaBoostClassifier
 from sklearn.metrics import confusion_matrix, accuracy_score

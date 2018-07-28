@@ -1,12 +1,11 @@
-import numpy as np
 from sklearn.decomposition import PCA
 from matplotlib import pyplot as plt
 from sklearn.datasets import load_digits
 
 # 8x8 pixel per image -> 64 features !!! Humans are not able to cope with this
-#	This is why we use PCA -> reduce the dimenions: we can visualize the data in 2D.
+# This is why we use PCA -> reduce the dimensions: we can visualize the data in 2D.
 # We want to investigate if the distribution after PCA reveals the
-#  distribution of the different classes, and if they are clearly separable
+# distribution of the different classes, and if they are clearly separable
 
 digits = load_digits()
 X_digits, y_digits = digits.data, digits.target

@@ -4,7 +4,6 @@ import matplotlib.pyplot as plt
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_squared_error 
 import math
-import sys
 
 
 dataset = pd.read_csv("data/house_prices.csv")
@@ -14,7 +13,7 @@ size = dataset['sqft_living']
 price = dataset['price']
 print(size.shape)
 
-# machine learing handle arrays not dataframes
+# machine learning handle arrays not dataframes
 x = np.array(size).reshape(-1,1)
 y = np.array(price).reshape(-1,1)
 

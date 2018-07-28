@@ -10,7 +10,7 @@ from sklearn import datasets
 				 Low value: influence reaches far      
 				 High value: influence reaches close
 
-		C -> trades off hyperplane surface simplicity + training examples missclassifications
+		C -> trades off hyperplane surface simplicity + training examples mis-classifications
 				 Low value: simple/smooth hyperplane surface 
 				 High value: all training examples classified correctly but complex surface 
 """

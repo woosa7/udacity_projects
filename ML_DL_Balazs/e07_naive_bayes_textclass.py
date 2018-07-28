@@ -1,6 +1,3 @@
-import numpy as np
-from matplotlib import pyplot as plt
-from sklearn.naive_bayes import GaussianNB
 from sklearn.datasets import fetch_20newsgroups
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.feature_extraction.text import TfidfTransformer
@@ -15,15 +12,15 @@ print('')
 print("Target is:", trainingData.target_names[trainingData.target[10]])
 print('')
 
-# we just count the word occurances
+# we just count the word occurrences
 countVectorizer = CountVectorizer()
 xTrainCounts = countVectorizer.fit_transform (trainingData.data)
 # print(countVectorizer.vocabulary_.get(u'software'))
 
-# we transform the word occurances into tfidf
+# we transform the word occurrences into tfidf
 # TfidfVectorizer = CountVectorizer + TfidfTransformer
-tfidTransformer = TfidfTransformer()
-xTrainTfidf = tfidTransformer.fit_transform(xTrainCounts)
+tfidfTransformer = TfidfTransformer()
+xTrainTfidf = tfidfTransformer.fit_transform(xTrainCounts)
 
 model = MultinomialNB().fit(xTrainTfidf, trainingData.target)
 
@@ -31,7 +28,7 @@ new = ['This has nothing to do with church or religion',
        'Software engineering is getting hotter and hotter nowadays',
        'drug discovery using deep learning']
 xNewCounts = countVectorizer.transform(new)
-xNewTfidf = tfidTransformer.transform(xNewCounts)
+xNewTfidf = tfidfTransformer.transform(xNewCounts)
 
 predicted = model.predict(xNewTfidf)
 

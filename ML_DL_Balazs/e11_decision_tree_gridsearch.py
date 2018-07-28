@@ -1,4 +1,3 @@
-import pandas as pd
 import numpy as np
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.model_selection import train_test_split, GridSearchCV
@@ -13,8 +12,8 @@ targets = dataset.target
 # with grid search you can find an optimal parameter "parameter tuning" !!!
 param_grid = {'max_depth': np.arange(1, 10)}
 
-# in every iteration data is splitted randomly in cross validation + DecisionTreeClassifier
-# initializes the tree randomly: thats why you get different results !!!
+# In every iteration, data split randomly in cross validation + DecisionTreeClassifier
+# initializes the tree randomly: that's why you get different results !!!
 tree = GridSearchCV(DecisionTreeClassifier(), param_grid)
 
 feature_train, feature_test, target_train, target_test = train_test_split(features, targets, test_size=.3)

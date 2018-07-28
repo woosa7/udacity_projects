@@ -25,7 +25,7 @@ feature_train, feature_test, target_train, target_test = train_test_split(data.f
 
 cross_valid_scores = []
 
-# small k : underfitting / large k : overfitting
+# small k : under-fitting / large k : over-fitting
 
 for k in range(1,50):
     knn = KNeighborsClassifier(n_neighbors=k)
