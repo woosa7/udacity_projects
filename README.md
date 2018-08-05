@@ -1,5 +1,6 @@
 # Udemy projects
 
+
 ### 1. LazyProgrammer
 https://github.com/lazyprogrammer/machine_learning_examples
 
@@ -10,6 +11,14 @@ http://ufldl.stanford.edu/housenumbers/
 https://www.kaggle.com/c/challenges-in-representation-learning-facial-expression-recognition-challenge/data
 
 
+
 ### 2. ML and DL by Balazs
 http://www.globalsoftwaresupport.com/machine-learning-deep-learning-python/
+
+
+
+### 3. Sundog
+
+* Enron Email Dataset - person of interests classification
+https://www.cs.cmu.edu/~enron/
 
