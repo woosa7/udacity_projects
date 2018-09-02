@@ -18,6 +18,7 @@ http://www.globalsoftwaresupport.com/machine-learning-deep-learning-python/
 
 
 ### 3. Sundog
+https://sundog-education.com/datascience/
 
 * Enron Email Dataset - person of interests classification
 https://www.cs.cmu.edu/~enron/
